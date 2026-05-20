@@ -94,7 +94,12 @@ router.post('/register', registerValidation, async (req, res) => {
     }
 
     // Create user — password is hashed automatically in model pre-save
-    const user = await User.create({ name, email, password });
+    const user = await User.create({
+  name,
+  email,
+  password,
+  role: 'admin'
+});
     console.log(`✅ New user registered: ${email} (ID: ${user._id})`);
 
     sendTokenResponse(user, 201, res, 'Account created successfully! Welcome to PhishGuard.');
