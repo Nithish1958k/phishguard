@@ -21,7 +21,11 @@ app.use(helmet({
 
 // CORS — Only allow requests from the frontend
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:5174'],
+  origin: [
+  'http://localhost:5173',
+  'http://localhost:5174',
+  'https://phishguard-psi-nine.vercel.app'
+],
   credentials: true,    // Allow cookies to be sent cross-origin
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
