@@ -186,8 +186,8 @@ useEffect(() => {
   try {
     const endpoint =
       authMode === "register"
-        ? "http://localhost:5000/api/auth/register"
-        : "http://localhost:5000/api/auth/login";
+        ? "https://phishguard-api-0smx.onrender.com/api/auth/register"
+        : "https://phishguard-api-0smx.onrender.com/api/auth/login";
 
     const payload =
       authMode === "register"
@@ -244,7 +244,7 @@ const fetchComplaints = async () => {
     if (!user?.id) return;
 
     const response = await axios.get(
-      `http://localhost:5000/api/complaints/${user.id}`
+      `https://phishguard-api-0smx.onrender.com/api/complaints/${user.id}`
     );
 
     setComplaints(response.data.complaints);
@@ -257,7 +257,7 @@ const updateComplaintStatus = async (id, status) => {
   try {
 
     const response = await axios.put(
-      `http://localhost:5000/api/complaints/${id}/status`,
+      `https://phishguard-api-0smx.onrender.com/api/complaints/${id}/status`,
       { status }
     );
 
@@ -309,7 +309,7 @@ console.log(newC);
 console.log("Submitting:", newC);
 
 const response = await axios.post(
-  "http://localhost:5000/api/complaints",
+  "https://phishguard-api-0smx.onrender.com/api/complaints",
   newC
 );
 
@@ -1091,7 +1091,7 @@ showNotif(`Complaint ${complaintId} submitted successfully!`, "success");
     </h4>
 
     <img
-      src={`http://localhost:5000/uploads/${selectedComplaint.evidence}`}
+      src={`https://phishguard-api-0smx.onrender.com/uploads/${selectedComplaint.evidence}`}
       alt="Evidence"
       style={{
         width: "100%",

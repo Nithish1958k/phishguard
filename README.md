@@ -93,7 +93,7 @@ npm install
 npm start
 ```
 
-React runs on http://localhost:3000 and proxies API calls to http://localhost:5000.
+React runs on http://localhost:3000 and proxies API calls to https://phishguard-api-0smx.onrender.com.
 
 ---
 
@@ -168,7 +168,7 @@ React runs on http://localhost:3000 and proxies API calls to http://localhost:50
 
 **Register:**
 ```
-POST http://localhost:5000/api/auth/register
+POST https://phishguard-api-0smx.onrender.com/api/auth/register
 Content-Type: application/json
 
 {
@@ -181,7 +181,7 @@ Content-Type: application/json
 
 **Login:**
 ```
-POST http://localhost:5000/api/auth/login
+POST https://phishguard-api-0smx.onrender.com/api/auth/login
 Content-Type: application/json
 
 {
